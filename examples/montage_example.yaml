@@ -1,0 +1,30 @@
+# Example spec for scislides-montage. Replace the placeholder file names with your own footage
+# (see docs/MEDIA.md for how to find and credit it). Paths are relative to this file.
+output: out/montage
+size: [560, 420]
+fps: 15
+caption: {size: 21, color: white, box_opacity: 0.62, box_height: 86}
+segments:
+  - source: clip_a.mp4          # placeholder
+    start: 3.0
+    duration: 4.8
+    crop: [640, 480, 100, 90]   # w, h, x, y: zoom on the part that matters
+    caption: "Real time: what the apparatus does"
+  - source: clip_a.mp4
+    start: 6.0
+    duration: 1.4
+    crop: [640, 480, 100, 90]
+    speed: 0.33                 # three times slower
+    caption: "Same moment, three times slower"
+    label: "3x slower"
+  - source: clip_b.mp4          # placeholder
+    start: 0
+    duration: 5.0
+    speed: 0.77
+    caption: "Source: <institution>, <year>"
+end_card:
+  duration: 4
+  lines:
+    - {text: "One sentence the audience should keep", size: 24, color: white}
+    - {text: "Credit: <channel / author>", size: 18, color: "0xFFB000"}
+gif: {width: 480, fps: 12, colors: 128}

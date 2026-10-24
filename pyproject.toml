@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scislides"
+version = "0.1.0"
+description = "Toolkit for building, checking and rendering scientific presentations (.pptx) with python-pptx"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["python-pptx>=0.6.23", "lxml", "Pillow", "numpy", "matplotlib"]
+
+[project.optional-dependencies]
+molecules = ["rdkit", "playwright"]
+video = ["yt-dlp", "pyyaml"]
+yaml = ["pyyaml"]
+test = ["pytest"]
+all = ["rdkit", "playwright", "yt-dlp", "pyyaml", "pytest"]
+
+[project.scripts]
+scislides-check = "scislides.check:main"
+scislides-render = "scislides.render:main"
+scislides-video = "scislides.media.video:main"
+scislides-montage = "scislides.media.montage:main"
+scislides-mol = "scislides.media.molecules:main"
+
+[tool.setuptools.packages.find]
+include = ["scislides*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
