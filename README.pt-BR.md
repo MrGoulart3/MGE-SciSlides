@@ -79,6 +79,19 @@ scislides-render out/demo.pptx -o out/render     # PDF, PNGs e contact.png
 - [docs/MEDIA.md](docs/MEDIA.md): vídeos, montagem, tamanho de GIF, proveniência, ética, ilustração por IA (em inglês)
 - [docs/MOLECULES.md](docs/MOLECULES.md): figuras de moléculas 2D e 3D (em inglês)
 
+## Projetos relacionados
+
+- **[mpl-animation](https://github.com/hugogontijomachado/mpl-animation)**, de
+  [@hugogontijomachado](https://github.com/hugogontijomachado): clipes explicativos animados com
+  matplotlib, feitos de etapas que terminam cada uma numa pausa. Gera MP4/GIF, corta os clipes nas
+  pausas e pode montar um PowerPoint em que cada clique toca o clipe seguinte. Use quando o gráfico
+  precisa se *mover* no palco. Combina com `scislides.media.plots` (camadas estáticas) e com as
+  ferramentas de GIF daqui.
+- **[MGE-MolecularMotionVideo](https://github.com/MrGoulart3/MGE-MolecularMotionVideo)**: uma skill
+  para vídeos narrados e cientificamente corretos de movimento molecular. Usa o Blender com
+  geometria real e movimento vindo de cálculos (MD, IRC/NEB, modos normais), além de narração por
+  voz sintética e legendas. Use quando um GIF não basta e o slide pede um filme curto.
+
 ## Testes
 
 ```bash

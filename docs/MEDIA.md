@@ -90,3 +90,13 @@ style, 16:9, an empty dark left third for the title, and restrictions (no text, 
 instructions). Add the illustration with `layouts.opener(..., ai_generated=True)` for the
 "AI-generated illustration." credit, store prompt and tool in the provenance file, and never
 use generated images in place of data figures.
+
+## 6. Going further: animated charts and molecular films
+
+- Animated charts that advance click by click:
+  [mpl-animation](https://github.com/hugogontijomachado/mpl-animation) (by @hugogontijomachado).
+- Narrated molecular motion videos (Blender, real computed motion):
+  [MGE-MolecularMotionVideo](https://github.com/MrGoulart3/MGE-MolecularMotionVideo).
+
+Both produce MP4/GIF files that drop straight into a deck: use `Deck.pic` for a GIF, or
+`edit.replace_blob` to swap a newer render into an existing deck.
